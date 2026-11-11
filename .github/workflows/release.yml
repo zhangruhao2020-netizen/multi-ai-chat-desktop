@@ -165,7 +165,10 @@ jobs:
           if-no-files-found: error
 
   release:
-    if: startsWith(github.ref, 'refs/tags/v')
+    # Fork policy: publish with whatever platform artifacts succeeded; a single
+    # failed/cancelled platform build must not block the release. Only a
+    # deliberately cancelled run skips publishing.
+    if: ${{ !cancelled() && startsWith(github.ref, 'refs/tags/v') }}
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -183,9 +186,9 @@ jobs:
         with:
           tag_name: ${{ env.RELEASE_TAG }}
           generate_release_notes: true
-          # Create a DRAFT release — the maintainer reviews the built artifacts on GitHub and
-          # clicks "Publish" manually. The pipeline never auto-publishes.
-          draft: true
+          # Fork policy: publish immediately (upstream created a draft for manual
+          # review; this fork auto-publishes its own builds to Releases).
+          draft: false
           prerelease: ${{ contains(env.RELEASE_TAG, '-pre') }}
           files: |
             artifacts/**/*.exe
