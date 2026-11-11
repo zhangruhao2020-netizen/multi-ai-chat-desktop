@@ -235,6 +235,7 @@ export const I18N_KEYS = [
   'settings.language.system',
   'settings.language.en',
   'settings.language.zhTW',
+  'settings.language.zhCN',
   'settings.language.ja',
   'settings.language.de',
   'settings.responseLanguage',

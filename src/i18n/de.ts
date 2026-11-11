@@ -255,6 +255,7 @@ export const de: Record<I18nKey, string> = {
   'settings.language.system': 'System',
   'settings.language.en': 'Englisch',
   'settings.language.zhTW': 'Traditionelles Chinesisch',
+  'settings.language.zhCN': 'Vereinfachtes Chinesisch',
   'settings.language.ja': 'Japanisch',
   'settings.language.de': 'Deutsch',
   'settings.responseLanguage': 'Antwortsprache',

@@ -253,6 +253,7 @@ export const en: Record<I18nKey, string> = {
   'settings.language.system': 'System',
   'settings.language.en': 'English',
   'settings.language.zhTW': 'Traditional Chinese',
+  'settings.language.zhCN': 'Simplified Chinese',
   'settings.language.ja': 'Japanese',
   'settings.language.de': 'German',
   'settings.responseLanguage': 'Response language',

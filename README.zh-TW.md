@@ -1,6 +1,6 @@
 # Multi-AI Chat Desktop
 
-[English](./README.md) · **繁體中文** · [日本語](./README.ja.md) · [Deutsch](./README.de.md)
+[English](./README.md) · **繁體中文** · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md)
 
 只問一次，讓四個已登入的 AI 網頁 session 互相回答、審查、質疑，再一起收斂結果。**ChatGPT、Claude、Gemini、Grok 仍是預設陣容；Meta AI 是 Settings 裡實驗性的第五家備用選項。** Multi-AI Chat Desktop 是以 Tauri 2 打造的多 AI workflow 中樞，不只是把四個聊天視窗並排。
 
@@ -84,7 +84,7 @@ Windows portable 版不顯示 app 內更新控制，請自行到 [GitHub Release
 - **本機 session 延續。** 可開始乾淨對話，或打開最多 30 份只存在本機的 transcript。恢復後的追問只會取得同一 session 的有限上下文。
 - **可讀且忠實的輸出。** 安全的 semantic Markdown 支援標題、巢狀清單、連結、引用、fenced code 與可橫向捲動表格，並保留數學式原始內容；ChatGPT 只產生圖片時也能正常完成。
 - **可重現工作。** 可選的 snapshot 與固定隱私分級、replay、checkpoint、Markdown 匯出、provider 診斷，以及 2,000 筆去重的記憶體 log 都會保留。
-- **介面與回覆語言分離。** UI 支援 English、繁體中文、日本語、Deutsch。自動回覆語言會優先採用明確指示，其次是本題與對話語言，最後才用 UI 語言備援。
+- **介面與回覆語言分離。** UI 支援 English、繁體中文、简体中文、日本語、Deutsch。自動回覆語言會優先採用明確指示，其次是本題與對話語言，最後才用 UI 語言備援。
 - **AI-Sister 四角色紀念版。** 可選 Theme 只裝飾 app 自己的介面，絕不重新 styling 第三方 provider 頁面。
 - **Agent-ready 原始碼啟動。** 明確呼叫的 Codex 與 Claude Code repo Skills 可以檢查環境並開啟本機 source app，不需先 build 安裝檔。
 

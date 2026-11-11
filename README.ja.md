@@ -1,6 +1,6 @@
 # Multi-AI Chat Desktop
 
-[English](./README.md) · [繁體中文](./README.zh-TW.md) · **日本語** · [Deutsch](./README.de.md)
+[English](./README.md) · [繁體中文](./README.zh-TW.md) · [简体中文](./README.zh-CN.md) · **日本語** · [Deutsch](./README.de.md)
 
 一度質問するだけで、ログイン済みの4つのAI Webセッションが回答し、レビューし、反論しながら結果を磨きます。**ChatGPT、Claude、Gemini、Grokが引き続きデフォルトで、Meta AIはSettingsで選べる実験的な5番目のスタンバイです。** Multi-AI Chat Desktopは、4つのチャットを横に並べただけではない、Tauri 2製のマルチAIワークフローハブです。
 
@@ -84,7 +84,7 @@ Windows portable版にはアプリ内更新UIがありません。[GitHub Releas
 - **ローカルで会話を継続。** 新しい会話を始めるか、このPCだけに保存された最大30件のtranscriptを再開できます。再開後のfollow-upには同じsessionの限定的な文脈だけが渡ります。
 - **読みやすく忠実な出力。** 安全なsemantic Markdownで見出し、ネストしたlist、link、quote、fenced code、数式source、横scroll可能なtableを保持します。ChatGPTの画像のみの回答も完了できます。
 - **再現可能な作業。** Opt-in snapshotと固定済みprivacy tier、replay、checkpoint、Markdown export、provider診断、重複除去された2,000件のin-memory logを利用できます。
-- **UI言語と回答言語を分離。** UIはEnglish、繁體中文、日本語、Deutschに対応。回答言語Autoは明示指定、現在の質問、会話の順に従い、UI言語は最後のfallbackにだけ使います。
+- **UI言語と回答言語を分離。** UIはEnglish、繁體中文、简体中文、日本語、Deutschに対応。回答言語Autoは明示指定、現在の質問、会話の順に従い、UI言語は最後のfallbackにだけ使います。
 - **AI-Sister 4キャラクター記念版。** 任意のThemeはアプリ所有のUIだけを装飾し、第三者のprovider pageを変更しません。
 - **Agent-ready source launch。** 明示的なCodex／Claude Code repo Skillで、installerをbuildせず前提条件を監査し、ローカルsource appを起動できます。
 

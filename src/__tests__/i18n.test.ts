@@ -11,10 +11,11 @@ import {
   normalizeResponseLanguageSetting,
   resolveLocale,
 } from '../i18n/resolve';
+import { zhCN } from '../i18n/zh-CN';
 import { zhTW } from '../i18n/zh-TW';
 
 describe('i18n dictionaries', () => {
-  const dictionaries = { en, 'zh-TW': zhTW, ja, de } as const;
+  const dictionaries = { en, 'zh-TW': zhTW, 'zh-CN': zhCN, ja, de } as const;
 
   it('defines every key in every language with non-empty values', () => {
     for (const [locale, dictionary] of Object.entries(dictionaries)) {
@@ -51,7 +52,8 @@ describe('i18n dictionaries', () => {
   });
 
   it('normalizes supported language settings', () => {
-    expect(LANGUAGE_SETTINGS).toEqual(['system', 'en', 'zh-TW', 'ja', 'de']);
+    expect(LANGUAGE_SETTINGS).toEqual(['system', 'en', 'zh-TW', 'zh-CN', 'ja', 'de']);
+    expect(normalizeLanguageSetting('zh-CN')).toBe('zh-CN');
     expect(normalizeLanguageSetting('ja')).toBe('ja');
     expect(normalizeLanguageSetting('de')).toBe('de');
     expect(normalizeLanguageSetting('ja-JP')).toBe('system');
@@ -59,7 +61,8 @@ describe('i18n dictionaries', () => {
   });
 
   it('normalizes response language settings independently from the interface language', () => {
-    expect(RESPONSE_LANGUAGE_SETTINGS).toEqual(['auto', 'en', 'zh-TW', 'ja', 'de']);
+    expect(RESPONSE_LANGUAGE_SETTINGS).toEqual(['auto', 'en', 'zh-TW', 'zh-CN', 'ja', 'de']);
+    expect(normalizeResponseLanguageSetting('zh-CN')).toBe('zh-CN');
     expect(normalizeResponseLanguageSetting('auto')).toBe('auto');
     expect(normalizeResponseLanguageSetting('en')).toBe('en');
     expect(normalizeResponseLanguageSetting('zh-TW')).toBe('zh-TW');
@@ -69,7 +72,10 @@ describe('i18n dictionaries', () => {
 
   it('resolves system locales in navigator preference order', () => {
     expect(resolveLocale('system', ['zh'])).toBe('zh-TW');
-    expect(resolveLocale('system', ['zh-CN'])).toBe('zh-TW');
+    expect(resolveLocale('system', ['zh-CN'])).toBe('zh-CN');
+    expect(resolveLocale('system', ['zh-Hans'])).toBe('zh-CN');
+    expect(resolveLocale('system', ['zh-SG'])).toBe('zh-CN');
+    expect(resolveLocale('system', ['zh-HK'])).toBe('zh-TW');
     expect(resolveLocale('system', ['zh-TW'])).toBe('zh-TW');
     expect(resolveLocale('system', ['ja'])).toBe('ja');
     expect(resolveLocale('system', ['ja-JP'])).toBe('ja');
@@ -85,6 +91,7 @@ describe('i18n dictionaries', () => {
   it('keeps explicit locale choices regardless of system locale', () => {
     expect(resolveLocale('en', ['zh-TW'])).toBe('en');
     expect(resolveLocale('zh-TW', ['en-US'])).toBe('zh-TW');
+    expect(resolveLocale('zh-CN', ['en-US'])).toBe('zh-CN');
     expect(resolveLocale('ja', ['de-DE'])).toBe('ja');
     expect(resolveLocale('de', ['ja-JP'])).toBe('de');
   });

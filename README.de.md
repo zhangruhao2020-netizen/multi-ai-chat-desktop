@@ -1,6 +1,6 @@
 # Multi-AI Chat Desktop
 
-[English](./README.md) · [繁體中文](./README.zh-TW.md) · [日本語](./README.ja.md) · **Deutsch**
+[English](./README.md) · [繁體中文](./README.zh-TW.md) · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · **Deutsch**
 
 Eine Frage genügt: Vier angemeldete KI-Websitzungen antworten, prüfen, widersprechen und verfeinern das Ergebnis gemeinsam. **ChatGPT, Claude, Gemini und Grok bleiben die Standardauswahl; Meta AI ist eine experimentelle fünfte Standby-Option in den Einstellungen.** Multi-AI Chat Desktop ist ein Workflow-Hub auf Basis von Tauri 2, nicht bloß vier nebeneinander angeordnete Chats.
 
@@ -84,7 +84,7 @@ Wähle Desktop für einen eigenen Arbeitsbereich und den vollständigen lokalen 
 - **Lokale Fortsetzung.** Beginne ein leeres Gespräch oder öffne bis zu 30 ausschließlich lokal gespeicherte Transkripte. Fortsetzungen erhalten begrenzten Kontext nur aus derselben Sitzung.
 - **Lesbare, getreue Ausgabe.** Sicheres semantisches Markdown bewahrt Überschriften, verschachtelte Listen, Links, Zitate, fenced code, mathematischen Quelltext und horizontal scrollbar Tabellen. Auch reine ChatGPT-Bildantworten können abgeschlossen werden.
 - **Reproduzierbare Arbeit.** Optionale Snapshots mit den eingefrorenen Datenschutzstufen, Replay, Checkpoints, Markdown-Export, Anbieterdialognostik und ein dedupliziertes In-Memory-Log mit 2.000 Ereignissen bleiben verfügbar.
-- **Getrennte Oberflächen- und Antwortsprache.** Die UI unterstützt English, 繁體中文, 日本語 und Deutsch. Automatik folgt zuerst einer ausdrücklichen Vorgabe, dann Frage und Gespräch; die UI-Sprache ist nur der letzte Rückfall.
+- **Getrennte Oberflächen- und Antwortsprache.** Die UI unterstützt English, 繁體中文, 简体中文, 日本語 und Deutsch. Automatik folgt zuerst einer ausdrücklichen Vorgabe, dann Frage und Gespräch; die UI-Sprache ist nur der letzte Rückfall.
 - **AI-Sister-Gedenkausgabe.** Das optionale Theme mit vier Figuren dekoriert ausschließlich app-eigene Oberflächen und verändert keine Anbieterseite.
 - **Agent-ready Quellstart.** Explizite Repository-Skills für Codex und Claude Code prüfen Voraussetzungen und starten die lokale Quell-App, ohne einen Installer zu bauen.
 

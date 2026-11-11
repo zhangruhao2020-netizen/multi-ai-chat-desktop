@@ -1,6 +1,6 @@
 # Multi-AI Chat Desktop
 
-**English** · [繁體中文](./README.zh-TW.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md)
+**English** · [繁體中文](./README.zh-TW.md) · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md)
 
 Ask once. Let four signed-in AI web sessions answer, review, challenge, and refine one another. **ChatGPT, Claude, Gemini, and Grok remain the default lineup; Meta AI is an experimental fifth standby option in Settings.** Multi-AI Chat Desktop is a Tauri 2 workflow hub, not four chat windows placed side by side.
 
@@ -84,7 +84,7 @@ Choose Desktop when you want a dedicated workspace and the full local workflow t
 - **Local continuity.** Start a clean conversation or reopen up to 30 locally stored transcripts. Restored follow-ups receive bounded context from that same session only.
 - **Readable, faithful output.** Safe semantic Markdown supports headings, nested lists, links, quotes, fenced code, and scrollable tables while preserving math source. Image-only ChatGPT responses can also complete.
 - **Reproducible work.** Opt-in snapshots with frozen privacy tiers, replay, checkpoints, Markdown export, provider diagnostics, and a 2,000-event deduplicated in-memory log remain available.
-- **Independent interface and response languages.** The UI supports English, Traditional Chinese, Japanese, and German. Auto response language follows an explicit request, then the current question and conversation, using UI language only as fallback.
+- **Independent interface and response languages.** The UI supports English, Traditional Chinese, Simplified Chinese, Japanese, and German. Auto response language follows an explicit request, then the current question and conversation, using UI language only as fallback.
 - **AI-Sister Commemorative Edition.** The optional four-character theme decorates only app-owned surfaces and never reskins provider pages.
 - **Agent-ready source launch.** Explicit Codex and Claude Code repository Skills can audit prerequisites and launch the local source app without building an installer.
 

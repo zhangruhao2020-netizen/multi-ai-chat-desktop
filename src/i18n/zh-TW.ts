@@ -243,6 +243,7 @@ export const zhTW: Record<I18nKey, string> = {
   'settings.language.system': '系統',
   'settings.language.en': 'English',
   'settings.language.zhTW': '繁體中文',
+  'settings.language.zhCN': '簡體中文',
   'settings.language.ja': '日文',
   'settings.language.de': '德文',
   'settings.responseLanguage': '回覆語言',

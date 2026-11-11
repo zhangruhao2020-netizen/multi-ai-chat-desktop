@@ -15,11 +15,12 @@ export interface ResponseLanguagePolicy {
 const LOCALE_NAMES: Record<Locale, string> = {
   en: 'English (en)',
   'zh-TW': 'Traditional Chinese (zh-TW)',
+  'zh-CN': 'Simplified Chinese (zh-CN)',
   ja: 'Japanese (ja)',
   de: 'German (de)',
 };
 
-const LOCALES = new Set<Locale>(['en', 'zh-TW', 'ja', 'de']);
+const LOCALES = new Set<Locale>(['en', 'zh-TW', 'zh-CN', 'ja', 'de']);
 const POLICY_TAG_PATTERN = /<response-language-policy version="(\d+)" setting="([^"]+)" interface-locale="([^"]+)">/g;
 
 export function createResponseLanguagePolicy(
